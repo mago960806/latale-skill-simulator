@@ -1,0 +1,249 @@
+/* 全体の設定 */
+html,
+body
+{
+	/* background: #d6e7e2; */
+	background: #bbddf0;	/* 本家様(tkmk.jp)より、少し青っぽくする */
+	/* font-size: 12px; */
+	font-size: 10pt;
+	line-height: 1.3;
+	/* font-family: "ＭＳ Ｐゴシック", "MS P Gothic", "メイリオ", Meiryo, Osaka, sans-serif; */
+}
+
+h1
+{
+	font-size: 13pt;
+}
+
+.toolbox
+{
+	background: #BFDDFD;
+	border: 2px solid #324c5f;
+	border-radius: 4px;
+	padding: 2px;
+}
+
+.clearfix {zoom:1;}
+.clearfix:after
+{
+    content: ""; 
+    display: block; 
+    clear: both;
+}
+
+/* tkmk-nav */
+#nav{font-size: 9pt;padding:4px 0;text-align:center;color:#fff;background:#324c5f}#nav a{color:#fff}#nav ul,#nav li{display:inline}
+
+/* コンテナ */
+#container
+{
+	/* width: 1100px; */
+	width: 1155px;		/* 表示がきつくなっているページがあったので拡張(2013.12.21時点でハイランの専門スキルに合わせてます) */
+	margin: 8px auto;
+}
+
+/* ヘッダ */
+#header
+{
+	margin: 4px 0;
+}
+
+/* コンテンツ */
+
+/* フッタ */
+
+/* 職業選択リスト */
+#class-category-menu
+{
+	margin: 4px 0;
+	display: inline-block;
+	white-space: nowrap;	/* class-category-menu を全体的にひろげたので */
+	width: 1150px;			/* container と同じところまで伸ばす */
+}
+
+#class-category-menu li
+{
+	color: #324c5f;
+	position: relative;
+	display: inline-block;
+	/display: inline;
+	/zoom: 1;
+	width: 85px;		/* 2020.12.28 ランサー追加の為かなりせばめる(100→85) */
+}
+
+#class-category-menu li:hover
+{
+	cursor: pointer;
+	background-color: #7cabe2;
+	width: 180px;		/* 2017.10.18 */
+}
+
+#class-category-menu img
+{
+	margin-right: 2px;
+}
+
+#class-category-menu span
+{
+	vertical-align: 10px;
+}
+
+.class-menu
+{
+	position: absolute;
+	display: none;
+	padding: 2px;
+}
+
+.class-menu li
+{
+	display: block !important;
+	padding: 2px 0;
+}
+
+/* 2015.12.21 職アイコン用に追加*/
+.class_icon
+{
+	display: inline-block;
+	/display: inline;
+	/zoom: 1;
+	width: 33px;
+	height: 32px;
+	margin-right: 2px;
+}
+
+/* ステータス表示ボックス */
+#state
+{
+	margin: 4px 0;
+}
+#state div
+{
+	float: left;
+}
+
+#character-lv-box,
+#skill-point-box
+{
+	background: #fff;
+	border-radius: 4px;
+	margin: 0 4px;
+	padding: 4px;
+	width: 115px;	/* SP数値次第で幅が変わって、リセットボタンの位置がうろうろしたので */
+}
+
+#character-lv,
+#skill-point
+{
+	text-align: center;
+	font-size: 24px;
+	color: #324c5f;
+}
+
+/* スキルツリータブコントロール */
+#trees
+{
+	margin: 4px 0;
+}
+
+#tree-tabs li
+{
+	display: inline-block;
+	/display: inline;
+	/zoom: 1;
+	border: 1px solid #324c5f;
+	border-radius: 4px 4px 0 0;
+	background: #BFDDFD;
+	padding: 8px;
+	cursor: pointer;
+}
+
+#tree-tabs li.active
+{
+	background: #fff;
+	color: #324c5f;
+	font-weight: bold;
+	border-bottom: 1px solid #fff;
+}
+
+.tree
+{
+	display: none;
+	background: #fff;
+	border-color: #324c5f;
+	border-width: 0 1px 1px 1px;
+	border-style: solid;
+	padding: 8px;
+}
+/* スキル */
+.icon
+{
+	display: inline-block;
+	/display: inline;
+	/zoom: 1;
+	width: 32px;
+	height: 32px;
+	margin-right: 4px;
+	margin-bottom: 2px;
+}
+
+.disable-shadow
+{
+	display: inline-block;
+	/display: inline;
+	/zoom: 1;
+	width: 32px;
+	height: 32px;
+	background: rgba(0, 0, 0, 0.5);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#80000000,endColorstr=#80000000);
+}
+
+.tip
+{
+	display: none;
+	position: absolute;
+	background: #fff;
+	border: 2px solid #324c5f;
+	border-radius: 4px;
+	padding: 8px;
+}
+
+.skill
+{
+	/* max-width: 180px; */
+	max-width: 185px;		/* Lv10 じゃなくLv9 で改行される事が多い？ので少し拡張 */
+	margin: 2px;
+	padding: 2px;
+	background: #d6e7e2;
+	border-radius: 4px;
+}
+
+.skill-name
+{
+	font-size:  9pt;
+}
+
+.skill-lv-change-button
+{
+	display: inline-block;
+	/display: inline;
+	/zoom: 1;
+	text-align: center;
+	width: 12px;
+	height: 10px;
+	padding: 2px;
+	margin: 1px;
+	background: #fff;
+	color: #324c5f;
+	border-radius: 2px;
+	font-size: 10px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.skill-lv-change-button:hover,
+.active
+{
+	background:#324c5f;
+	color: #fff;
+}

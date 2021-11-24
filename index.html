@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ラテール スキルシミュレーター</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="stylesheets/cssreset-min.css" />
+		<link rel="stylesheet" type="text/css" href="stylesheets/skills.css" />
+		<!--[if gt IE 8]>
+		<style type="text/css">
+		* { filter:progid:DXImageTransform.Microsoft.gradient(enabled=false) !important; }
+		</style>
+		<![endif]-->
+		<script type="text/javascript" src="scripts/jquery.js"></script>
+		<script type="text/javascript" src="scripts/jquery.url.js"></script>
+		<script type="text/javascript" src="scripts/skill-tsukaiou.js"></script>
+	</head>
+	<body>
+		<!-- tkmk nav -->
+		<div id="nav">
+			tkmk.jp様のを元にしたスキルシミュレータ ver 2021.10.21
+		</div>
+		<!-- container -->
+		<div id="container">
+			<!-- header -->
+			<div id="header">
+			<h1>
+				<div id="header"><h1><a href="./"><img src="images/skill.png" />ラテール　スキルシミュレータ</a></h1></div>
+			</h1>
+			</div>
+			<!-- content -->
+			<div id="content">
+				<!-- class-category-menu -->
+				<ul id="class-category-menu" class="toolbox">
+					<li>
+						<span class="class_icon" style="vertical-align: middle; background: url(images/classes/UI_ICON_001.PNG) 0px 0px"></span>
+						<span style="vertical-align: middle;">ファイター系</span>
+						<ul class="class-menu toolbox">
+							<li data-class-id="1">ファイター</li>
+							<li data-class-id="5">　ウォーロード</li>
+							<li data-class-id="15">　　ドラグーン</li>
+							<li data-class-id="36">　　　デストロイヤー★</li>
+							<li data-class-id="24">　　ハイランダー◆</li>
+							<li data-class-id="6">　ブレイダー</li>
+							<li data-class-id="16">　　スラッシャー</li>
+							<li data-class-id="37">　　　フェイタルブレイド★</li>
+							<li data-class-id="25">　　ソードダンサー◆</li>
+						</ul>
+					</li>
+					
+					<li>
+						<span class="class_icon" style="vertical-align: middle; background: url(images/classes/UI_ICON_001.PNG) -33px 0px"></span>
+						<span style="vertical-align: middle;">シールダ―系</span>
+						<ul class="class-menu toolbox">
+							<li data-class-id="2">シールダー</li>
+							<li data-class-id="7">　テンプルナイト</li>
+							<li data-class-id="17">　　ホーリーナイト</li>
+							<li data-class-id="38">　　　ホーリーセイバー★</li>
+							<li data-class-id="26">　　ダークナイト◆</li>
+							<li data-class-id="8">　モンク</li>
+							<li data-class-id="18">　　ゴッドハンド</li>
+							<li data-class-id="39">　　　セフィロト★</li>
+							<li data-class-id="27">　　サイキッカー◆</li>
+						</ul>
+					</li>
+					
+					<li>
+						<span class="class_icon" style="vertical-align: middle; background: url(images/classes/UI_ICON_001.PNG) -66px 0px"></span>
+						<span style="vertical-align: middle;">マジシャン系</span>
+						<ul class="class-menu toolbox">
+							<li data-class-id="3">マジシャン</li>
+							<li data-class-id="9">　ソーサラー</li>
+							<li data-class-id="19">　　エレメンタルマスター</li>
+							<li data-class-id="40">　　　アークメイジ★</li>
+							<li data-class-id="28">　　ファントムメイジ◆</li>
+							<li data-class-id="10">　アーティスト</li>
+							<li data-class-id="20">　　ミンストレル</li>
+							<li data-class-id="41">　　　グランシンフォニア★</li>
+							<li data-class-id="29">　　マエストロ◆</li>
+						</ul>
+					</li>
+					
+					<li>
+						<span class="class_icon" style="vertical-align: middle; background: url(images/classes/UI_ICON_001.PNG) -99px 0px"></span>
+						<span style="vertical-align: middle;">レンジャー系</span>
+						<ul class="class-menu toolbox">
+							<li data-class-id="4">レンジャー</li>
+							<li data-class-id="11">　トレジャーハンター</li>
+							<li data-class-id="21">　　ルーインウォーカー</li>
+							<li data-class-id="42">　　　ウィンドストーカー★</li>
+							<li data-class-id="30">　　ローグマスター◆</li>
+							<li data-class-id="12">　ガンスリンガー</li>
+							<li data-class-id="22">　　デュエリスト</li>
+							<li data-class-id="43">　　　フライシュッツ★</li>
+							<li data-class-id="31">　　ジャッジメント◆</li>
+						</ul>
+					</li>
+
+					<li>
+						<span class="class_icon" style="vertical-align: middle; background: url(images/classes/UI_ICON_001.PNG) -132px 0px"></span>
+						<span style="vertical-align: middle;">エンジニア</span>
+						<ul class="class-menu toolbox">
+							<li data-class-id="13">エンジニア■</li>
+							<li data-class-id="14">　マイスター</li>
+							<li data-class-id="23">　　マシーナリー</li>
+							<li data-class-id="44">　　　マニピュレーター★</li>
+							<li data-class-id="32">　　スターシーカー◆</li>
+						</ul>
+					</li>
+
+					<li>
+						<span class="class_icon" style="vertical-align: middle; background: url(images/classes/UI_ICON_001.PNG) -165px 0px"></span>
+						<span style="vertical-align: middle;">ソウルブレイカー</span>
+						<ul class="class-menu toolbox">
+							<li data-class-id="33">ソウルブレイカー</li>
+							<li data-class-id="34">　ソウルリーヴァー</li>
+							<li data-class-id="35">　　ソウルロード</li>
+							<li data-class-id="45">　　　ソウルテイカー★</li>
+						</ul>
+					</li>
+					
+					<li>
+						<span class="class_icon" style="vertical-align: middle; background: url(images/classes/UI_ICON_001.PNG) -198px 0px"></span>
+						<span style="vertical-align: middle;">カードマスター</span>
+						<ul class="class-menu toolbox">
+							<li data-class-id="46">カードマスター</li>
+							<li data-class-id="47">　ハイマスター</li>
+							<li data-class-id="48">　　ホーリーマスター</li>
+							<li data-class-id="49">　　　アークマスター★</li>
+							<li data-class-id="50">　バトルマスター</li>
+							<li data-class-id="51">　　ダークマスター</li>
+							<li data-class-id="52">　　　フォースマスター★</li>
+						</ul>
+					</li>
+
+					<li>
+						<span class="class_icon" style="vertical-align: middle; background: url(images/classes/UI_ICON_001.PNG) -231px 0px"></span>
+						<span style="vertical-align: middle;">ブラックソード</span>
+						<ul class="class-menu toolbox">
+							<li data-class-id="53">ベイグラント</li>
+							<li data-class-id="54">　ロイヤルガード</li>
+							<li data-class-id="55">　　ストレイドッグ</li>
+							<li data-class-id="56">　　　ブラックソード★</li>
+						</ul>
+					</li>
+
+					<li>
+						<span class="class_icon" style="vertical-align: middle; background: url(images/classes/UI_ICON_001.PNG) -264px 0px"></span>
+						<span style="vertical-align: middle;">デミゴッド</span>
+						<ul class="class-menu toolbox">
+							<li data-class-id="57">オラクル</li>
+							<li data-class-id="58">　バトルロード</li>
+							<li data-class-id="59">　　アベンジャー</li>
+							<li data-class-id="60">　　　デミゴッド★</li>
+						</ul>
+					</li>
+
+					<li>
+						<span class="class_icon" style="vertical-align: middle; background: url(images/classes/UI_ICON_001.PNG) -297px 0px"></span>
+						<span style="vertical-align: middle;">アグニ</span>
+						<ul class="class-menu toolbox">
+							<li data-class-id="61">マーセナリー</li>
+							<li data-class-id="62">　フレイムロード</li>
+							<li data-class-id="63">　　マグマフォース</li>
+							<li data-class-id="64">　　　アグニ★</li>
+						</ul>
+					</li>
+
+					<li>
+						<span class="class_icon" style="vertical-align: middle; background: url(images/classes/UI_ICON_001.PNG) -479px -218px"></span>
+						<span style="vertical-align: middle;">フェンサー</span>
+						<ul class="class-menu toolbox">
+							<li data-class-id="65">フェンサー</li>
+							<li data-class-id="66">　クローザー</li>
+							<li data-class-id="67">　　ソードマスター</li>
+							<li data-class-id="68">　　　ダークチェイサー★</li>
+							<li data-class-id="69">　　ジュエルスター◆</li>
+						</ul>
+					</li>
+
+					<li>
+						<span class="class_icon" style="vertical-align: middle; background: url(images/classes/UI_ICON_001.PNG) -446px -218px"></span>
+						<span style="vertical-align: middle;">ランサー</span>
+						<ul class="class-menu toolbox">
+							<li data-class-id="70">ランサー</li>
+							<li data-class-id="71">　ブラックナイト</li>
+							<li data-class-id="72">　　ピースメーカー</li>
+							<li data-class-id="73">　　　シャドウウォーカー</li>
+						</ul>
+					</li>
+
+				</ul>
+				
+				<!-- state -->
+				<div id="state" class="clearfix">
+					<div id="character-lv-box">
+						<p>キャラクターLv</p>
+						<p id="character-lv">1</p>
+					</div>
+					<div id="skill-point-box">
+						<p>スキルポイント</p>
+						<p id="skill-point">0</p>
+						<p id="skill-point-detail">0(+0)-0 = 0</p>
+					</div>
+					<div>
+						<ul>
+							<li><label><input type="checkbox" class="bonus-point-checkbox" data-bonus-point="1" />ドリスゲームボーナス</label></li>
+							<li><label><input type="checkbox" class="bonus-point-checkbox" data-bonus-point="1" />エリアス帰還の碑石ボーナス</label></li>
+							<li><label><input type="checkbox" class="bonus-point-checkbox" data-bonus-point="10" />3次転職ボーナス</label></li>
+							<li><label><input type="checkbox" class="bonus-point-checkbox" data-bonus-point="1" />名誉スキルポイントクーポンボーナス</label></li>
+							<li><label><input type="checkbox" class="bonus-point-checkbox" data-bonus-point="1" />モンスタータワー上級認定ボーナス</label></li>
+							<li><label><input type="checkbox" class="bonus-point-checkbox" data-bonus-point="10" />4次転職ボーナス</label></li>
+						</ul>
+					</div>
+					<div>
+						<button id="url-button">URL出力</button>
+						<br />
+						<textarea id="url-textarea" rows="4" cols="75">ここにURL出力の結果が表示されます</textarea>
+						<br />
+					</div>
+					<div align="right">
+						<button class="reset-button">リセット</button>
+					</div>
+				</div>
+				
+				<!-- trees -->
+				<div id="trees">
+					<ul id="tree-tabs">
+						<li class="active">Welcome...</li>
+					</ul>
+					<div class="tree">
+						<h1>スキルシミュレーターを使いおう！</h1>
+						<br>
+						何かありましたら 管理人の知り合いのみ(※)問合せ可です<br>
+						※管理人のリアル都合により。。すみませんm(_ _)m
+						<br><br>
+						<h2>(注意事項)</h2>
+						<ul style="list-style-type: disc; margin: 0 0 0 2em;">
+							<li>
+								<div style="font-weight:bold; color:red;">古いスキルツリーが表示される？といった場合は、
+								<a href="http://www.google.co.jp/search?q=ブラウザのキャッシュを削除する" target="_blank">
+									ブラウザのキャッシュを削除
+								</a>
+								してみてください</div></li>
+							<li>サブクラスの新スキルの習得Lvが、正確でないようです。<br>
+								基本的に 150と160Lvで習得のようですので、ご注意くださいませ。<br>
+								(時間とれたら直します)</li>
+							<li>当ページは基本的には作者の勉強用ページですので、いきなり見た目(色とか)が変わったりします</li>
+						</ul>
+						<br>
+						<h2>2021.10.23 更新</h2>
+						<ul style="list-style-type: disc; margin: 0 0 0 2em;">
+							<li>10/7 のアップデート内容を反映しました。</li>
+						</ul>
+						<br>
+						<br>
+						<h2>2021.07.08 更新</h2>
+						<ul style="list-style-type: disc; margin: 0 0 0 2em;">
+							<li>7/8 のアップデート内容を反映しました。</li>
+						</ul>
+						<br>
+						<br>
+						<h2>2021.03.19 更新</h2>
+						<ul style="list-style-type: disc; margin: 0 0 0 2em;">
+							<li>3/18 のアップデート内容を反映しました。</li>
+						</ul>
+						<br>
+						<br>
+						<h2>2019.12.22 更新</h2>
+						<ul style="list-style-type: disc; margin: 0 0 0 2em;">
+							<li>12/19 のアップデート内容を反映しました。(新職と各スキルアイコン)</li>
+							<li>ジュエルスターはフェンサーの下にぶら下げてます。</li>
+						</ul>
+						<br>
+<!--					<h1>※ブラウザは最新のバージョンじゃないと動かない可能性があります</h1> -->
+<!--					<h1>何かあれば<a href="/">掲示板</a>まで。</h1> -->
+					</div>
+				</div>
+
+			</div>
+			<!-- end content -->
+			<div id="footer">
+				<p>author: pshu@青鯖</p>
+				<p>material:<a href="http://ghostcradle.pya.jp/" target="_blank">Ghost Cradle</a>
+							<a href="http://tkmk.jp/" target="_blank">tkmk.jp</a>
+				</p>
+				<p>&copy;2006 Actoz Soft, All right reserved.
+				   &copy;2006 Gamepot Inc, All right reserved.
+				   &copy;tkmk.jpのひと 様</p>
+			</div>
+		</div>
+		<!-- end container -->
+		<div class="tip"></div>
+</body>
+</html>
