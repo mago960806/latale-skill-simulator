@@ -68,7 +68,7 @@ h1
 	display: inline-block;
 	/display: inline;
 	/zoom: 1;
-	width: 85px;		/* 2020.12.28 ランサー追加の為かなりせばめる(100→85) */
+	width: auto;		/* 2020.12.28 ランサー追加の為かなりせばめる(100→85) */
 }
 
 #class-category-menu li:hover
