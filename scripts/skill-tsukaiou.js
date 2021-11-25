@@ -782,9 +782,9 @@ View = (function() {
   */
   View.prototype.renderSkillDescription = function(skill) {
     var content, currentLv, requireSkillInfo, _i, _len, _ref, _ref1;
-    content = "<p>" + skill.description + "</p>\n<p>&nbsp;</p>\n<p>[\u5FC5\u8981\u30AD\u30E3\u30E9Lv]</p>\n<p>" + (skill.requireCharacterLvs.join('/')) + "</p>";
+    content = "<p>" + skill.description + "</p>\n<p>&nbsp;</p>\n<p>[等级要求Lv]</p>\n<p>" + (skill.requireCharacterLvs.join('/')) + "</p>";
     if (0 < skill.requireSkills.length) {
-      content += "<p>&nbsp;</p><p>[\u7FD2\u5F97\u6761\u4EF6]</p><ul>";
+      content += "<p>&nbsp;</p><p>[前置技能要求]</p><ul>";
       currentLv = (_ref = skill.id, __indexOf.call(this.simulator.state.skills, _ref) >= 0) ? this.simulator.state.skills[skill.id] : 0;
       _ref1 = skill.requireSkills;
       for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
