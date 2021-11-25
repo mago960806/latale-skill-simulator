@@ -790,7 +790,12 @@ View = (function() {
       for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
         requireSkillInfo = _ref1[_i];
         skill = this.simulator.getSkill(requireSkillInfo.id);
-        content += "<li>" + skill.name + " Lv." + requireSkillInfo.lv + "</li>";
+        if (skill !== null){
+          content += "<li>" + skill.name + " Lv." + requireSkillInfo.lv + "</li>";
+        } else {
+          content += "<li>无</li>";
+        }
+        
       }
       content += "</ul>";
     }
